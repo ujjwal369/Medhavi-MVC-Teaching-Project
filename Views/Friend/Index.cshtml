@@ -1,0 +1,38 @@
+﻿@model IEnumerable<Friend>
+@{
+    ViewData["Title"] = "Index";
+
+}
+
+
+<h1>Index</h1>
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>
+                Id
+            <th>
+                Name
+            </th>
+            <th></th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var obj in Model)
+        {
+            <tr>
+                <td>
+                    @obj.Name
+                </td>
+
+                <td> <a asp-controller="Friend" asp-action="Edit" asp-route-id="@obj.Id">edit</a> </td>
+
+                <td> <a asp-controller="Friend" asp-action="Delete" asp-route-id="@obj.Id">Delete</a> </td>
+            </tr>
+
+        }
+    </tbody>
+
+</table>
