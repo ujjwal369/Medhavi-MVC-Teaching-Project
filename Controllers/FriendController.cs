@@ -44,7 +44,6 @@ namespace Medhavi_MVC.Controllers
         {
             if (ModelState.IsValid)
             {
-                //string ujjwal = HashPassword(friend.Name);
                 _db.Friend.Add(friend);
                 _db.SaveChanges();
                 TempData["Sucess"] = "Friend  Added sucessfully";
@@ -53,14 +52,7 @@ namespace Medhavi_MVC.Controllers
             return View(friend);
         }
 
-        private string HashPassword(string name)
-        {
-            using (var sha25 = SHA256.Create())
-            {
-                var hasedByte = sha25.ComputeHash(Encoding.UTF8.GetBytes(name));
-                return Convert.ToBase64String(hasedByte);
-            }
-        }
+        
 
         // GET: FriendController/Edit/5
         public ActionResult Edit(int id)
