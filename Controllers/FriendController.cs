@@ -14,7 +14,7 @@ namespace Medhavi_MVC.Controllers
         private readonly ApplicationDbContext _db;
         public FriendController(ApplicationDbContext db)
         {
-
+            _db = db;
         }
 
 
