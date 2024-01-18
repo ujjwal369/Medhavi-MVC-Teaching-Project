@@ -9,6 +9,8 @@ namespace Medhavi_MVC.Models
         public ApplicationDbContext(DbContextOptions dbContextOptions) : base(dbContextOptions)
         { }
         public DbSet<Teacher> Teachers { get; set; }
+        public DbSet<Friend> Friends { get; set; }
+        public DbSet<Hello> Hellos { get; set; }
         public DbSet<Student> Students { get; set; }
 
 
