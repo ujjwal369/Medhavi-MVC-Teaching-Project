@@ -6,8 +6,6 @@ namespace Medhavi_MVC.Models
 {
     public class BaseModel : RootModel
     {
-        [Key]
-        public int Id { get; set; }
         public DateTime CreatedDateTime { get; set; }
         public DateTime ModifiedDataTime { get; set; }
 
