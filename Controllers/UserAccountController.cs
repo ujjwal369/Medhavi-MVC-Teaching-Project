@@ -31,7 +31,7 @@ namespace Medhavi_MVC.Controllers
                 UserAccount? userAccount = _applicationDbContext.UserAccount.Where(x => x.UserName == userAccountViewModel.UserName).FirstOrDefault();
                 if (userAccount == null)
                 {
-                    return View(userAccount);
+                    return BadRequest("User Not Found");
                 }
                 var hashedPassword = HashPassword(userAccountViewModel.PassWord);
                 if (userAccount.PassWord != hashedPassword)

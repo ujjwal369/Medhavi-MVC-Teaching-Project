@@ -1,12 +1,6 @@
 ﻿using Medhavi_MVC.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Hosting;
-using NuGet.Common;
-using System.Runtime.Intrinsics.Arm;
-using System.Security.Cryptography;
-using System.Text;
-
 namespace Medhavi_MVC.Controllers
 {
     public class FriendController : Controller

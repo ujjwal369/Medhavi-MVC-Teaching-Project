@@ -1,4 +1,5 @@
-﻿@model UserAccount
+﻿@using Medhavi_MVC.ViewModels
+@model UserAccountViewModel
 
 
 <h2>Sign In</h2>
@@ -10,11 +11,13 @@
     <div class="form-group">
         @Html.LabelFor(m => m.UserName)
         @Html.TextBoxFor(m => m.UserName, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.UserName)
     </div>
 
     <div class="form-group">
         @Html.LabelFor(m => m.PassWord)
         @Html.PasswordFor(m => m.PassWord, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.PassWord)
     </div>
 
     <button type="submit" class="btn btn-primary">Sign In</button>
